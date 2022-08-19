@@ -186,7 +186,8 @@ PrefabInstance:
       propertyPath: nextPortal
       value: 
       objectReference: {fileID: 321759230}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2686732063532506039, guid: a675edf59f7f7df4f974f8838907e957, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a675edf59f7f7df4f974f8838907e957, type: 3}
 --- !u!4 &258898887 stripped
 Transform:
@@ -590,6 +591,7 @@ GameObject:
   - component: {fileID: 1025107159}
   - component: {fileID: 1025107161}
   - component: {fileID: 1025107160}
+  - component: {fileID: 1025107162}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Portal
@@ -646,8 +648,20 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0962915, y: 4.8608813, z: 4.4831944}
-  m_Center: {x: 0.04814565, y: 1.9304407, z: -1.5954027}
+  m_Size: {x: 0.64350533, y: 4.8608813, z: 4.303392}
+  m_Center: {x: -0.01735127, y: 1.9304405, z: -1.5055007}
+--- !u!114 &1025107162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025107158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16059102f50ac864bb0fd152681fa50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1078516601
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,10 +982,9 @@ GameObject:
   - component: {fileID: 1241696631}
   - component: {fileID: 1241696632}
   - component: {fileID: 1241696633}
-  - component: {fileID: 1241696634}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1096,19 +1109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66134b28d4e8fa54aac28b1dccb8ccf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1241696634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241696626}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 876188963ea48104f9de613280168679, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  live: 1
+  Cooldown: 0.31
+  Teleporters:
+  - {fileID: 321759230}
+  - {fileID: 258898887}
+  - {fileID: 1410631071}
 --- !u!1 &1286374183
 GameObject:
   m_ObjectHideFlags: 3
@@ -1267,7 +1272,8 @@ PrefabInstance:
       propertyPath: nextPortal
       value: 
       objectReference: {fileID: 258898887}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2686732063532506039, guid: a675edf59f7f7df4f974f8838907e957, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a675edf59f7f7df4f974f8838907e957, type: 3}
 --- !u!4 &1410631071 stripped
 Transform:
@@ -1337,5 +1343,6 @@ PrefabInstance:
       propertyPath: nextPortal
       value: 
       objectReference: {fileID: 1410631071}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2686732063532506039, guid: a675edf59f7f7df4f974f8838907e957, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a675edf59f7f7df4f974f8838907e957, type: 3}
